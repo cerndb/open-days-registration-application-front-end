@@ -1,0 +1,90 @@
+<!-- Copyright (C) 2019, CERN
+This software is distributed under the terms of the GNU General Public
+Licence version 3 (GPL Version 3), copied verbatim in the file "LICENSE".
+In applying this license, CERN does not waive the privileges and immunities
+granted to it by virtue of its status as Intergovernmental Organization
+or submit itself to any jurisdiction. -->
+<div class="welcome-page center-aligned">
+   <h1 i18n="welcome page| page starting header@@welcomePageHeader">Welcome to CERN Open Days registration
+      system</h1>
+   <div><span i18n="welcome page| free event description text @@welcomePageFreeEventText">The CERN Open Days is a free
+         event, but registration is required to guarantee your access to the sites.</span></div>
+   <div>&nbsp;</div>
+   <div *ngIf="pageHasError">
+      <div>&nbsp;</div>
+      <span class="error-message">{{pageErrorMessage}}</span>
+      <div>&nbsp;</div>
+   </div>
+   <div *ngIf="displayDailyAvailablityTable" class="welcome-page__availablity-table-container">
+      <table class="welcome-page__availablity-table-container__table">
+         <tr>
+            <th class="welcome-page__availablity-table-container__table__row_left"
+               i18n="welcome page| available places table header visitday text @@welcomePageAvailablePlacesVisitDayHeaderText">
+               Visit day</th>
+            <th class="welcome-page__availablity-table-container__table__row_right"
+               i18n="welcome page| available places table header tickets available text @@welcomePageAvailablePlacesTicketsAvailableHeaderText">
+               Tickets available</th>
+         </tr>
+         <tr *ngFor="let dayEntry of dailyAvailabiltyTable">
+            <td class="welcome-page__availablity-table-container__table__row_left">{{dayEntry.visitDay}}</td>
+            <td class="welcome-page__availablity-table-container__table__row_right"
+               [class.ticketsAvailable]="dayEntry.ticketAvailable"
+               [class.ticketsNotAvailable]="!dayEntry.ticketAvailable">
+               <span *ngIf="dayEntry.ticketAvailable" i18n="day has ticket | day has tickets text @@YesText">Yes</span>
+               <span *ngIf="!dayEntry.ticketAvailable"
+                  i18n="day has no ticket | day has no tickets text @@NoText">No</span>
+            </td>
+         </tr>
+      </table>
+   </div>
+   <br />
+   <div><span i18n="welcome page| more information about the event description text @@welcomePageMoreInfoText">More
+         information on why and how to register is available </span><a href="{{moreInformationURL}}"
+         i18n="welcome page| more information link text @@welcomePageMoreInfoLinkText" target="_blank">here</a>
+   </div>
+   <div class="welcome-page__navigation">
+      <ul class="welcome-page__navigation__items">
+         <li class="welcome-page__navigation__items__element">
+            <a href="{{requestTokenPage}}">
+               <mat-card class="welcome-page__navigation__items__element__card"
+                  [ngClass]="{'welcome-page__navigation__items__element__card--french': pageIsFrench}">
+                  <mat-card-header>
+                     <mat-card-title
+                        i18n="welcome page| login with passcode card title @@welcomePageLoginWithPasscodeCardTitle">
+                        Login with your valid passcode</mat-card-title>
+                     <mat-icon class="welcome-page__navigation__items__element__icon-color"
+                        aria-label="login with passcode">verified_user</mat-icon>
+                  </mat-card-header>
+                  <mat-card-content>
+                     <p
+                        i18n="welcome page| login with passcode card description @@welcomePageLoginWithPasscodeCardContent">
+                        The passcode you will use must have been issued less than 30 minutes ago. Otherwise request a
+                        new passcode.
+                     </p>
+                  </mat-card-content>
+               </mat-card>
+            </a>
+         </li>
+         <li class="welcome-page__navigation__items__element">
+            <a href="{{requestPassCodePage}}">
+               <mat-card class="welcome-page__navigation__items__element__card"
+                  [ngClass]="{'welcome-page__navigation__items__element__card--french': pageIsFrench}">
+                  <mat-card-header>
+                     <mat-card-title
+                        i18n="welcome page| request passcode card title @@welcomePageRequestPasscodeCardTitle">
+                        Request new passcode by email</mat-card-title>
+                     <mat-icon class="welcome-page__navigation__items__element__icon-color"
+                        aria-label="request passcode">vpn_key</mat-icon>
+                  </mat-card-header>
+                  <mat-card-content>
+                     <p i18n="welcome page| request passcode card description @@welcomePageRequestPasscodeCardContent">
+                        The passcode will be sent by email and be valid for 30 minutes. It will allow you to login for
+                        registration.
+                     </p>
+                  </mat-card-content>
+               </mat-card>
+            </a>
+         </li>
+      </ul>
+   </div>
+</div>

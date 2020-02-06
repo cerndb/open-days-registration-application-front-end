@@ -1,0 +1,20 @@
+<!-- Copyright (C) 2019, CERN
+This software is distributed under the terms of the GNU General Public
+Licence version 3 (GPL Version 3), copied verbatim in the file "LICENSE".
+In applying this license, CERN does not waive the privileges and immunities
+granted to it by virtue of its status as Intergovernmental Organization
+or submit itself to any jurisdiction. -->
+<h1 mat-dialog-title i18n="dialog no fast track lhc tickets| dialog header @@noLHCTicketsDialogTitleText">Fast Track LHC
+   warning !</h1>
+<div mat-dialog-content>
+   <p i18n="dialog no fast track lhc tickets text| confirmation text  @@noLHCTicketsDialogConfirmationText">There are no
+      Fast Track LHC tickets for this slot do you want to proceed ?</p>
+   <p i18n="dialog no fast track lhc tickets text| more information text  @@noLHCTicketsDialogConfirmationText">For more
+      information about the LHC Fast Track click here. </p>
+</div>
+<div mat-dialog-actions>
+   <button mat-button mat-stroked-button [mat-dialog-close]="0" cdkFocusInitial
+      i18n="dialog cancel reservation button| no button @@noLHCTicketsDialogNoButton">No</button>
+   <button mat-button mat-stroked-button [mat-dialog-close]="1"
+      i18n="dialog cancel reservation button| yes button @@yesLHCTicketsDialogNoButton">Yes</button>
+</div>

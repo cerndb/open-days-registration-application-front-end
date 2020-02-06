@@ -1,0 +1,18 @@
+<!-- Copyright (C) 2019, CERN
+This software is distributed under the terms of the GNU General Public
+Licence version 3 (GPL Version 3), copied verbatim in the file "LICENSE".
+In applying this license, CERN does not waive the privileges and immunities
+granted to it by virtue of its status as Intergovernmental Organization
+or submit itself to any jurisdiction. -->
+<div>
+   <h1>CERN OpenDays registration application</h1>
+   <div>
+      <label>Test input:
+         <input [(ngModel)]="testInput" placeholder="test field value" />
+      </label>
+   </div>
+   <br />
+   <div><span>Test response: </span>{{testResponse}}</div>
+   <br />
+   <button (click)="sendMessage()">Test message send!</button>
+</div>

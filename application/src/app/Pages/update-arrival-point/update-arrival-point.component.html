@@ -1,0 +1,32 @@
+<!-- Copyright (C) 2019, CERN
+This software is distributed under the terms of the GNU General Public
+Licence version 3 (GPL Version 3), copied verbatim in the file "LICENSE".
+In applying this license, CERN does not waive the privileges and immunities
+granted to it by virtue of its status as Intergovernmental Organization
+or submit itself to any jurisdiction. -->
+<div class="arrival-selector center-aligned">
+   <app-arrival-point-instructions [deviceIsMobile]="deviceIsMobile"></app-arrival-point-instructions>
+   <div>&nbsp;</div>
+   <div><span><strong>{{visitDay}}</strong></span></div>
+   <div>
+      <app-entrance-selector [deviceIsMobile]="deviceIsMobile" [arrivalPoints]="arrivalPoints"
+         (markedTimeslotChanged)="updateArrivalSelectionMessage($event);"></app-entrance-selector>
+      <div *ngIf="pageHasError">
+         <div>&nbsp;</div>
+         <span class="error-message">{{errorMessage}}</span>
+         <div>&nbsp;</div>
+      </div>
+      <div>&nbsp;</div>
+      <div class="center-aligned">
+         <div class="navigation-buttons">
+            <div class="navigation-button">
+               <button mat-stroked-button (click)="cancelUpdateProcess();" mat-button
+                  i18n="workflow navigation button|button cancel @@navigationButtonCancel">Cancel</button>
+            </div>
+            <div class="navigation-button">
+               <button mat-stroked-button (click)="updateReservation();" mat-button
+                  i18n="workflow navigation button|button update @@navigationUpdateNext">Update</button>
+            </div>
+         </div>
+      </div>
+   </div>

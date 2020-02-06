@@ -1,0 +1,513 @@
+// Copyright (C) 2019, CERN
+// This software is distributed under the terms of the GNU General Public
+// Licence version 3 (GPL Version 3), copied verbatim in the file "LICENSE".
+// In applying this license, CERN does not waive the privileges and immunities
+// granted to it by virtue of its status as Intergovernmental Organization
+// or submit itself to any jurisdiction.
+
+/*
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$opendays-registration-app-primary: mat-palette($mat-indigo);
+$opendays-registration-app-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$opendays-registration-app-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$opendays-registration-app-theme: mat-light-theme($opendays-registration-app-primary, $opendays-registration-app-accent, $opendays-registration-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($opendays-registration-app-theme);
+*/
+
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/material/theming';
+
+
+* {
+   box-sizing: border-box;
+}
+
+body { 
+   background: url(http://localhost/opendays_background.png) no-repeat center top/cover;
+   background-color: #ffffff;
+   margin:0;
+   font-family: 'Source Sans Pro', sans-serif;
+
+   .error-message{
+      color:red;
+   }
+
+   .inline-block{
+      display:inline-block;
+   }
+
+   mat-toolbar {
+      mat-toolbar-row {
+         background: #060a33;
+         color:#ec8137;      
+      }
+   }
+   
+   .centered-div{
+      position: absolute;
+      width: auto;
+      height: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+   }
+
+   .center-aligned{
+     text-align: center;
+   }
+
+   .flex-center-aligned{
+      justify-content: center;
+   }
+
+   .left-aligned{
+      text-align: left;
+   }
+   .right-aligned{
+      text-align: right;
+   }
+
+   .welcome-page{
+
+      &__availablity-table-container{
+         display: inline-block;
+         margin: 0 auto;
+         
+         &__table{
+            border: 2px solid #ec8137;
+            border-radius: 25px;
+            padding: 10px;
+            &__row_left{
+               float: left;
+               text-align:left;
+               width: 200px;
+            }
+            &__row_right{
+               float:right;
+               text-align:center;
+               
+               width: 130px;
+            }
+
+            .ticketsNotAvailable{
+               background-color: lightcoral;
+            }
+            .ticketsAvailable{
+               background-color: lightgreen;
+            }
+         }
+      }
+
+      &__navigation__items{
+         margin: 0;
+         padding: 0;
+         display:inline-block;
+         list-style: none;
+
+         &__element {
+            display:inline-block;
+            vertical-align:top; 
+            border-radius: 40px;
+            margin: 20px 10px;
+            text-decoration: none;	
+            font-weight: bold;
+   
+            &__icon-color{
+               color:#2062a3;
+             }   
+
+             &__card{
+               display:inline-block;
+               width:300px;
+               height:180px;
+               border-top: 13px solid #ec8137;
+               border-radius: 7%;
+            }
+
+            &__card--french{
+               height:230px;
+            }
+         }
+
+         &__element a:hover{
+            background: #2062a3;
+            border: 4px solid white;
+            
+            .welcome-page__navigation__items__element__card{
+               border-color: #2062a3;
+            }   
+   
+            .welcome-page__navigation__items__element__icon-color{
+              color:#ec8137;
+            }
+         }
+      }
+   }
+   
+   .reservation-dashboard-page{
+      &__ticket-card{
+         margin: 7px;
+         border: 2px solid #ec8137;
+         border-radius: 25px;
+         display:inline-block;
+         vertical-align:top;
+         
+         &__summary-table{
+            width:340px;
+
+            &__right-ordered-column{
+               float:right;
+            }
+
+            &__left-ordered-column{
+               float:left;
+            }
+
+            &__separator{
+               background: #53b4db;
+               &__span{
+                  float: left;
+                  padding-top:17px;
+                  margin-left:7px;
+                  height:40px;
+               }
+               
+               &__modification-button{
+                  background-color: #ffffff;
+                  border:1px solid black !important;
+                  margin: 7px;
+                  float: right; 
+
+                  .mat-icon {
+                     font-size: 25px;
+                     color:#2062a3;
+                  }
+               }
+            }
+         }
+      }
+      
+      .devider-table-row{
+         border-bottom: 2px solid #ec8137;
+      }
+    
+   }
+
+
+   .arrival-selector{
+
+      &__detail-description-div--desktop{
+         display:inline-block;
+         vertical-align:middle;
+         width:650px;
+         word-wrap:break-word;
+         text-align:justify;
+      }
+
+      &__detail-description-div--mob{
+         word-wrap:break-word;
+         padding: 10px;         
+      }
+
+      ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+      }
+
+      .selectedTimeslot{
+         background: #2062a3;
+      }
+
+      .button-selectable{
+         background: lightgreen;
+      }
+
+      .button-not-selectable{
+         background: lightcoral;
+      }
+
+      .timetable{
+         margin: auto;
+      }
+
+      .activity-tablerows-borders {
+         border: 1px solid black;
+      }
+
+      .mat-radio-button{
+         padding: 10px;
+      }
+
+      .mat-radio-button.mat-accent .mat-radio-outer-circle{
+         border-color:#2062a3;
+      }
+
+      .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+         border-color:#2062a3;
+       }
+       
+       .mat-radio-button.mat-accent .mat-radio-inner-circle{
+         color:#2062a3;
+         background-color:#ec8137;
+       }
+       
+       .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+           background-color:#2062a3;
+       }   
+   }
+
+   .general-form-inputs{
+      display: none;
+   }
+
+   .navigation-buttons{
+      display: inline-block;
+   }
+   .navigation-button{
+      padding :10px;
+      display: inline-block;
+   }
+
+   .unformatted-list{
+      list-style-type:none;
+   }
+
+   .visitor-detail{
+      .detail-description-div{
+         display:inline-block;
+         vertical-align:middle;
+         width:450px;
+         word-wrap:break-word;
+      }
+
+      .detail-description-div--line-breaked{
+         display:inline-block;
+         vertical-align:middle;
+         width:650px;
+         word-wrap:break-word;
+         text-align: left;
+      }
+
+      .detail-description-div--mob{
+         word-wrap:break-word;
+         padding: 10px;         
+      }
+
+      // adds breaks to the mat-checkboxes with long labels
+      .mat-checkbox-layout {
+         white-space: normal !important;
+      }
+
+      // rather than center the checkbox, put the checkbox in the first line
+      .mat-checkbox-inner-container {
+         margin-top: 3px !important;
+      }      
+   }
+
+   .transport-type-selector{
+      //text-align:center;
+      &__detail-description-div{
+         margin: 0 auto;
+         vertical-align:middle;
+         width:300px;
+         word-wrap:break-word;
+      }
+
+      &__detail-description-div--mob{
+         word-wrap:break-word;
+         padding: 10px;
+      }
+
+      .radio-container-desktop{
+         width:300px;
+         margin: auto;
+      }
+
+      &__radio-group{
+
+         display: flex;
+         flex-direction: column;
+         align-items: left;
+         justify-content: center;
+         margin:0;
+
+         &__element {
+            display: inline-block;
+            margin: 5px;
+         }
+
+         .mat-radio-button{
+            padding: 5px;
+         }
+   
+         .mat-radio-button.mat-accent .mat-radio-outer-circle{
+            border-color:#2062a3;
+         }
+   
+         .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+            border-color:#2062a3;
+          }
+          
+          .mat-radio-button.mat-accent .mat-radio-inner-circle{
+            color:#2062a3;
+            background-color:#ec8137;
+          }
+          
+          .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+              background-color:#2062a3;
+          }   
+   
+         .mat-checkbox-layout {
+            white-space: normal !important;
+         }
+            
+         .mat-radio-label {
+            white-space: normal !important;
+         }
+
+      }
+   }
+
+   .summary-page{
+
+      .summary-description{
+         padding:10px;
+      }
+      &__card-container{
+         display:inline-block;
+         &__card{
+            border: 2px solid #ec8137;
+            border-radius: 25px;
+            &__table{
+               margin: 7px;
+               width:250px;
+
+               &__right-ordered-column{
+                  float:right;
+               }
+
+               &__left-ordered-column{
+                  float:left;
+               }
+
+               &__separator{
+                  background: #53b4db;
+                  border-bottom: 2px solid #ec8137;
+                  &__span{
+                     float: left;
+                     padding-top:17px;
+                     margin-left:7px;
+                     height:40px;
+                  }               
+               }
+            }
+         }
+      }
+   }
+
+   .request-passcode-page{
+      &__checkboxes--desktop{
+         width:500px;
+         display: inline-block;
+         text-align:justify;
+         margin-bottom: 30px;  
+      }
+
+      // adds breaks to the mat-checkboxes with long labels
+      .mat-checkbox-layout {
+         white-space: normal !important;
+      }
+
+      // rather than center the checkbox, put the checkbox in the first line
+      .mat-checkbox-inner-container {
+         margin-top: 3px !important;
+      }      
+   }
+
+   .shared-banner {
+      height: 80px;
+      background: #060a33;
+      margin: 0;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+
+      &__content-left { 
+         float: left;
+
+         &__logo-img {
+            margin: 0;
+            padding:0;
+            height:80px;
+            width: 182.5px;
+            float: left;
+         }
+      }
+
+      &__content-right { 
+         margin-left: auto;
+         float: right;
+
+         &__opendays-img {
+            margin: 0;
+            padding:0;
+            height:26.25px;
+            width: 182.5px;
+            float: right;
+         }
+      }
+   }
+
+   .blink-demo{
+      text-align:center;
+      font-size:24px;
+      .blink_text {
+         animation:1s blinker linear infinite;
+         -webkit-animation:1s blinker linear infinite;
+         -moz-animation:1s blinker linear infinite;
+     
+          color: red;
+         }
+     
+         @-moz-keyframes blinker {  
+          0% { opacity: 1.0; }
+          50% { opacity: 0.0; }
+          100% { opacity: 1.0; }
+          }
+     
+         @-webkit-keyframes blinker {  
+          0% { opacity: 1.0; }
+          50% { opacity: 0.0; }
+          100% { opacity: 1.0; }
+          }
+     
+         @keyframes blinker {  
+          0% { opacity: 1.0; }
+          50% { opacity: 0.0; }
+          100% { opacity: 1.0; }
+          }
+   }
+}

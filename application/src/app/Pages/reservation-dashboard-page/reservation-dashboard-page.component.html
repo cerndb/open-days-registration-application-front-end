@@ -1,0 +1,142 @@
+<!-- Copyright (C) 2019, CERN
+This software is distributed under the terms of the GNU General Public
+Licence version 3 (GPL Version 3), copied verbatim in the file "LICENSE".
+In applying this license, CERN does not waive the privileges and immunities
+granted to it by virtue of its status as Intergovernmental Organization
+or submit itself to any jurisdiction. -->
+<div class="reservation-dashboard-page">
+   <div>&nbsp;</div>
+   <div *ngIf="!ticketReservationPeriodIsActive"
+      i18n="registration dashboard page | out of registration period text @@registrationDashboardPageOutOfRegistrationPeriod">
+      The registration system is not yet available. Please try again later.</div>
+   <div *ngIf="pageHasError" class="center-aligned">
+      <div>
+         <span class="error-message">{{pageErrorMessage}}</span>
+      </div>
+      <div>&nbsp;</div>
+   </div>
+   <div *ngIf="possibleToReserveTicket" class="center-aligned">
+      <button mat-stroked-button (click)="createNewReservation();" mat-button
+         i18n="registration dashboard page | create new registration button @@registrationDashboardPageCreateNewRegistrationButtonText">Click
+         here to make a new registration</button>
+   </div>
+   <div>&nbsp;</div>
+   <div *ngIf="existingFinalReservations.length>0" class="center-aligned">
+      <div i18n="registration dashboard page | your registration text @@registrationDashboardPageActiveRegsitrations">
+         Below you can find your existing registration(s)</div>
+      <div>&nbsp;</div>
+      <div *ngFor="let reservation of existingFinalReservations; index as reservationIndex;" class="inline-block">
+         <mat-card class="reservation-dashboard-page__ticket-card">
+            <mat-card-header class="flex-center-aligned">
+               <mat-card-title>{{reservation.visitDay}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+               <table class="reservation-dashboard-page__ticket-card__summary-table">
+                  <tr>
+                     <td colspan="2"
+                        class="center-aligned devider-table-row reservation-dashboard-page__ticket-card__summary-table__separator">
+                        <span class="reservation-dashboard-page__ticket-card__summary-table__separator__span"><strong
+                              i18n="summary table| arrival point text @@summaryTableArrivalPointText">Arrival</strong>
+                        </span>
+                        <button mat-stroked-button (click)="updateArrivalPoint(reservation.idReservation);"
+                           class="reservation-dashboard-page__ticket-card__summary-table__separator__modification-button">
+                           <mat-icon aria-label="update_arrival_point" inline=true>create</mat-icon>
+                        </button>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td i18n="summary table| arrival point name text @@summaryTableArrivalPointNameText"
+                        class="reservation-dashboard-page__ticket-card__summary-table__left-ordered-column">Site :</td>
+                     <td class="reservation-dashboard-page__ticket-card__summary-table__right-ordered-column">
+                        {{reservation.nameArrivalPoint}}</td>
+                  </tr>
+                  <tr>
+                     <td i18n="summary table| arrival point timeslot text @@summaryTableArrivalPointTimeslotText"
+                        class="reservation-dashboard-page__ticket-card__summary-table__left-ordered-column">
+                        Timeslot :</td>
+                     <td class="reservation-dashboard-page__ticket-card__summary-table__right-ordered-column">
+                        {{reservation.arrivalTimeslotStart}} -
+                        {{reservation.arrivalTimeslotEnd}}</td>
+                  </tr>
+                  <tr>
+                     <td colspan="2"
+                        class="center-aligned devider-table-row reservation-dashboard-page__ticket-card__summary-table__separator">
+                        <span class="reservation-dashboard-page__ticket-card__summary-table__separator__span"><strong
+                              i18n="summary table| visitors text @@summaryTableVisitorsText">Visitors</strong>
+                        </span>
+                        <button mat-stroked-button (click)="updateVisitorDetails(reservation.idReservation);"
+                           class="reservation-dashboard-page__ticket-card__summary-table__separator__modification-button">
+                           <mat-icon aria-label="update_visitors" inline=true>create</mat-icon>
+                        </button>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td i18n="summary table| simple text @@summaryTableSimpleText"
+                        class="reservation-dashboard-page__ticket-card__summary-table__left-ordered-column">Standard
+                        :</td>
+                     <td class="reservation-dashboard-page__ticket-card__summary-table__right-ordered-column">
+                        {{reservation.numberOfBookedStandardTickets}}</td>
+                  </tr>
+                  <tr>
+                     <td i18n="summary table|fast track text @@summaryTableFastTrackText"
+                        class="reservation-dashboard-page__ticket-card__summary-table__left-ordered-column">
+                        Fast Track LHC :</td>
+                     <td class="reservation-dashboard-page__ticket-card__summary-table__right-ordered-column">
+                        {{reservation.numberOfBookedFastTrackTickets}}</td>
+                  </tr>
+                  <tr>
+                     <td i18n="summary table|has disabled person text @@summaryTableHasDisabledPerson"
+                        class="reservation-dashboard-page__ticket-card__summary-table__left-ordered-column">
+                        Has disabled person :</td>
+                     <td class="reservation-dashboard-page__ticket-card__summary-table__right-ordered-column">
+                        <span *ngIf="reservation.groupHasDisabledMobility>0"
+                           i18n="group has disabled person | yes text @@YesText">Yes</span>
+                        <span *ngIf="reservation.groupHasDisabledMobility<1"
+                           i18n="group has disabled person | no text @@NoText">No</span>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td colspan="2"
+                        class="center-aligned devider-table-row reservation-dashboard-page__ticket-card__summary-table__separator">
+                        <span class="reservation-dashboard-page__ticket-card__summary-table__separator__span"><strong
+                              i18n="summary table| registration text @@summaryTableTransportTypeText">Transport</strong>
+                        </span>
+                        <button mat-stroked-button (click)="updateTransportType(reservation.idReservation);"
+                           class="reservation-dashboard-page__ticket-card__summary-table__separator__modification-button">
+                           <mat-icon aria-label="update_transport" inline=true>create</mat-icon>
+                        </button>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td i18n="summary table|origin text @@summaryTableOriginText"
+                        class="reservation-dashboard-page__ticket-card__summary-table__left-ordered-column">
+                        Origin :</td>
+                     <td class="reservation-dashboard-page__ticket-card__summary-table__right-ordered-column">
+                        <span>{{reservation.pointOfOriginDisplayName}}</span>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td i18n="summary table|type text @@summaryTableTypeText"
+                        class="reservation-dashboard-page__ticket-card__summary-table__left-ordered-column">
+                        Type :</td>
+                     <td class="reservation-dashboard-page__ticket-card__summary-table__right-ordered-column">
+                        <div *ngFor="let transportType of reservation.transportTypes; index as transportTypeIndex;">
+                           <span>{{transportType.displayName}}</span>
+                           <span *ngIf="transportTypeIndex<reservation.transportTypes.length-1">, </span>
+                        </div>
+                     </td>
+                  </tr>
+               </table>
+            </mat-card-content>
+            <mat-card-actions class="center-aligned">
+               <button (click)="openCancelConfirmationDialog(reservationIndex);" mat-button mat-stroked-button
+                  i18n="registration dashboard page |cancel button on registration @@registrationDashboardPageCancelButtonText">Cancel
+                  registration</button>
+               <button (click)="requestConfirmationResend(reservationIndex);" mat-button mat-stroked-button
+                  i18n="registration dashboard page |resend confirmation button on registration @@registrationDashboardPageResendConfrimationButtonText">Resend
+                  confirmation</button>
+            </mat-card-actions>
+         </mat-card>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,355 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template" target-language="fr">
+    <body>
+
+
+<trans-unit id="transportTypesPointOfOriginInstructionText" datatype="html" approved="yes">
+        <source>To help us
+   organizing the event, please let us know where you will come from.</source><target state="translated">Merci de nous indiquer également d'où vous viendrez.</target> <note priority="1" from="description"> point of origin text </note>
+        <note priority="1" from="meaning">transport types page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Components/point-of-origin-selector/point-of-origin-selector.component.html</context><context context-type="linenumber">9</context></context-group></trans-unit><trans-unit id="visitorsDetailNbrOfVisitorsHeader" datatype="html" approved="yes">
+        <source>Number of visitors</source><target state="translated">Nombre de visiteurs</target> 
+        <note priority="1" from="description"> number of visitors header text </note>
+        <note priority="1" from="meaning">visitors detail</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Components/visitors-selector/visitors-selector.component.html</context><context context-type="linenumber">7</context></context-group></trans-unit><trans-unit id="visitorsDetailInstructionText1" datatype="html" approved="yes">
+        <source>Specify the number of
+      visitors (max of 6, including yourself and children) and their age.</source><target state="translated">Indiquez le nombre de visiteurs (max 6, vous et les enfants y compris) et leur âge.</target> 
+        <note priority="1" from="description"> instruction message </note>
+        <note priority="1" from="meaning">visitors detail</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Components/visitors-selector/visitors-selector.component.html</context><context context-type="linenumber">12</context></context-group></trans-unit><trans-unit id="visitorsDetailInstructionText2" datatype="html" approved="yes">
+        <source>If it is still
+      available you can pick the LHC Fast Track option (12 years old or over) that guarantees a faster access. LHC
+      visits are possible without this option.</source><target state="translated">Si elle est encore disponible, cochez l'option Fast Track LHC (12 ans minimum) qui garantit un accès plus rapide. Les visites LHC sont possibles sans cette option.</target> 
+        <note priority="1" from="description"> instruction message </note>
+        <note priority="1" from="meaning">visitors detail</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Components/visitors-selector/visitors-selector.component.html</context><context context-type="linenumber">15</context></context-group></trans-unit><trans-unit id="visitorsDetailInstructionText3" datatype="html" approved="yes">
+        <source>There must be an adult (18 years old or over) in all groups of visitors.</source><target state="translated">Il est nécessaire qu’un adulte (au moins 18 ans) soit présent dans chaque groupe de visiteurs.</target> 
+        <note priority="1" from="description"> instruction message </note>
+        <note priority="1" from="meaning">visitors detail</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Components/visitors-selector/visitors-selector.component.html</context><context context-type="linenumber">19</context></context-group></trans-unit><trans-unit id="visitorsDetailInstructionText4" datatype="html" approved="yes">
+        <source>Age must be between 1
+      and 120. </source><target state="translated">L’âge doit se situer entre 0 et 120.</target> 
+        <note priority="1" from="description"> instruction message </note>
+        <note priority="1" from="meaning">visitors detail</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Components/visitors-selector/visitors-selector.component.html</context><context context-type="linenumber">22</context></context-group></trans-unit><trans-unit id="visitorsDetailAddVisitorButtonText" datatype="html" approved="yes">
+        <source>Add one visitor</source><target state="translated">Ajouter un visiteur</target> 
+        <note priority="1" from="description"> add new visitor button text </note>
+        <note priority="1" from="meaning">visitors detail</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Components/visitors-selector/visitors-selector.component.html</context><context context-type="linenumber">30</context></context-group></trans-unit><trans-unit id="visitorsDetailAvailableSpaceText" datatype="html" approved="yes">
+        <source>available</source><target state="translated">disponible</target> 
+        <note priority="1" from="description"> available places text </note>
+        <note priority="1" from="meaning">visitors detail</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Components/visitors-selector/visitors-selector.component.html</context><context context-type="linenumber">36</context></context-group></trans-unit><trans-unit id="visitorsDetailAvailableFastTrackSpaceText" datatype="html" approved="yes">
+        <source>Number of available LHC Fast Track: </source><target state="translated">Number of available LHC Fast Track:</target> 
+        <note priority="1" from="description"> available fast track text </note>
+        <note priority="1" from="meaning">visitors detail</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Components/visitors-selector/visitors-selector.component.html</context><context context-type="linenumber">42</context></context-group></trans-unit><trans-unit id="visitorsDetailDisabledMobility" datatype="html" approved="yes">
+        <source>Group has person with reduced mobility</source><target state="translated">Il y a des personnes à mobilité réduite dans mon groupe</target> 
+        <note priority="1" from="description"> checkbox group has disabled mobility </note>
+        <note priority="1" from="meaning">visitors detail</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Components/visitors-selector/visitors-selector.component.html</context><context context-type="linenumber">59</context></context-group></trans-unit>
+
+      
+      <trans-unit id="transportTypesInstructionText" datatype="html" approved="yes">
+        <source>To help us organizing the event, please let us know what transportation mean you plan to use to reach your arrival point.</source><target state="translated">Afin de faciliter l'organisation, merci de nous indiquer le moyen de transport que vous comptez utiliser pour vous rendre sur le lieu de visite.</target> <note priority="1" from="description"> transport type selector instructuin text </note>
+        <note priority="1" from="meaning">transport type selector instruction</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Components/transport-type-selector/transport-type-selector.component.html</context><context context-type="linenumber">14</context></context-group></trans-unit>
+      <trans-unit id="navigationButtonBack" datatype="html" approved="yes">
+        <source>Back</source><target state="translated">Précédent</target> <note priority="1" from="description">button back </note>
+        <note priority="1" from="meaning">workflow navigation button</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/transport-type-selector-page/transport-type-selector-page.component.html</context><context context-type="linenumber">24</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/summary-page/summary-page.component.html</context><context context-type="linenumber">106</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/visitors-detail-page/visitors-detail-page.component.html</context><context context-type="linenumber">21</context></context-group></trans-unit>
+      <trans-unit id="navigationButtonNext" datatype="html" approved="yes">
+        <source>Next</source><target state="translated">Suivant</target> <note priority="1" from="description">button next </note>
+        <note priority="1" from="meaning">workflow navigation button</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/transport-type-selector-page/transport-type-selector-page.component.html</context><context context-type="linenumber">32</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/arrival-selector-page/arrival-selector-page.component.html</context><context context-type="linenumber">30</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/summary-page/summary-page.component.html</context><context context-type="linenumber">114</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/visitors-detail-page/visitors-detail-page.component.html</context><context context-type="linenumber">29</context></context-group></trans-unit>
+      <trans-unit id="cancelReservationDiaologHeaderText" datatype="html" approved="yes">
+        <source>Reservation cancellation</source><target state="translated">Annulation de l’inscription</target> 
+        <note priority="1" from="description"> dialog header text </note>
+        <note priority="1" from="meaning">dialog cancel reservation</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Dialogs/cancel-reservation-dialog/cancel-reservation-dialog.component.html</context><context context-type="linenumber">7</context></context-group></trans-unit>
+      <trans-unit id="cancelReservationDiaologConfirmationText" datatype="html" approved="yes">
+        <source>Are you sure you want to cancel your reservation for <x id="INTERPOLATION" equiv-text="{{data.visitDay}}"/>?</source><target state="translated">Voulez-vous vraiment annuler votre inscription pour le <x id="INTERPOLATION" equiv-text="{{data.visitDay}}"/> ? </target> 
+        <note priority="1" from="description"> confirmation question text </note>
+        <note priority="1" from="meaning">dialog cancel reservation</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Dialogs/cancel-reservation-dialog/cancel-reservation-dialog.component.html</context><context context-type="linenumber">9</context></context-group></trans-unit>
+      <trans-unit id="cancelReservationDiaologNoThanksButton" datatype="html" approved="yes">
+        <source>No Thanks</source><target state="translated">Non</target> 
+        <note priority="1" from="description"> no thanks button </note>
+        <note priority="1" from="meaning">dialog cancel reservation</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Dialogs/cancel-reservation-dialog/cancel-reservation-dialog.component.html</context><context context-type="linenumber">12</context></context-group></trans-unit>
+      <trans-unit id="cancelReservationDiaologOkButton" datatype="html" approved="yes">
+        <source>Ok</source><target state="translated">Oui</target> 
+        <note priority="1" from="description"> ok button </note>
+        <note priority="1" from="meaning">dialog cancel reservation</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Dialogs/cancel-reservation-dialog/cancel-reservation-dialog.component.html</context><context context-type="linenumber">13</context></context-group></trans-unit>
+      <trans-unit id="registrationDashboardPageOutOfRegistrationPeriod" datatype="html" approved="yes">
+        <source>The registration system is not yet available. Please try again later.</source><target state="translated">Le système d'inscription n'est pas encore ouvert. Veuillez réessayer plus tard.</target> 
+        <note priority="1" from="description"> out of registration period text </note>
+        <note priority="1" from="meaning">registration dashboard page </note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/reservation-dashboard-page/reservation-dashboard-page.component.html</context><context context-type="linenumber">10</context></context-group></trans-unit>
+      <trans-unit id="registrationDashboardPageCreateNewRegistrationButtonText" datatype="html" approved="yes">
+        <source>Click here to make a new registration</source><target state="translated">Cliquer ici pour effectuer une nouvelle inscription</target> <note priority="1" from="description"> create new registration button </note>
+        <note priority="1" from="meaning">registration dashboard page </note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/reservation-dashboard-page/reservation-dashboard-page.component.html</context><context context-type="linenumber">20</context></context-group></trans-unit>
+      <trans-unit id="registrationDashboardPageActiveRegsitrations" datatype="html" approved="yes">
+        <source>Below you can find your existing registration(s)</source><target state="translated">Voici votre(vos) confirmation(s) d'inscription. Pour annuler une inscription, cliquez sur le bouton "Annuler l'inscription". Vous pouvez changer votre point ou heure d'arrivée, le nombre de visiteurs ou le moyen de transport en cliquant sur le bouton d'édition (crayon).</target> <note priority="1" from="description"> your registration text </note>
+        <note priority="1" from="meaning">registration dashboard page </note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/reservation-dashboard-page/reservation-dashboard-page.component.html</context><context context-type="linenumber">25</context></context-group></trans-unit>
+      <trans-unit id="summaryTableArrivalPointText" datatype="html" approved="yes">
+        <source>Arrival</source><target state="translated">Arrivée</target> <note priority="1" from="description"> arrival point text </note>
+        <note priority="1" from="meaning">summary table</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/reservation-dashboard-page/reservation-dashboard-page.component.html</context><context context-type="linenumber">39</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/summary-page/summary-page.component.html</context><context context-type="linenumber">23</context></context-group></trans-unit>
+      <trans-unit id="summaryTableArrivalPointNameText" datatype="html" approved="yes">
+        <source>Site :</source><target state="translated">Site :</target> <note priority="1" from="description"> arrival point name text </note>
+        <note priority="1" from="meaning">summary table</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/reservation-dashboard-page/reservation-dashboard-page.component.html</context><context context-type="linenumber">49</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/summary-page/summary-page.component.html</context><context context-type="linenumber">28</context></context-group></trans-unit>
+      <trans-unit id="summaryTableArrivalPointTimeslotText" datatype="html" approved="yes">
+        <source>Timeslot :</source><target state="translated">Tranche horaire :</target> <note priority="1" from="description"> arrival point timeslot text </note>
+        <note priority="1" from="meaning">summary table</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/reservation-dashboard-page/reservation-dashboard-page.component.html</context><context context-type="linenumber">55</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/summary-page/summary-page.component.html</context><context context-type="linenumber">34</context></context-group></trans-unit><trans-unit id="summaryTableVisitorsText" datatype="html" approved="yes">
+        <source>Visitors</source><target state="translated">Visiteurs</target> <note priority="1" from="description"> visitors text </note>
+        <note priority="1" from="meaning">summary table</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/reservation-dashboard-page/reservation-dashboard-page.component.html</context><context context-type="linenumber">65</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/summary-page/summary-page.component.html</context><context context-type="linenumber">41</context></context-group></trans-unit>
+      
+      <trans-unit id="summaryTableSimpleText" datatype="html" approved="yes">
+        <source>Standard :</source><target state="translated">Ticket standard :</target> <note priority="1" from="description"> simple text </note>
+        <note priority="1" from="meaning">summary table</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/reservation-dashboard-page/reservation-dashboard-page.component.html</context><context context-type="linenumber">75</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/summary-page/summary-page.component.html</context><context context-type="linenumber">46</context></context-group></trans-unit>
+      <trans-unit id="summaryTableFastTrackText" datatype="html" approved="yes">
+        <source>Fast Track LHC :</source><target state="translated">Ticket fast track LHC :</target> <note priority="1" from="description">fast track text </note>
+        <note priority="1" from="meaning">summary table</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/reservation-dashboard-page/reservation-dashboard-page.component.html</context><context context-type="linenumber">82</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/summary-page/summary-page.component.html</context><context context-type="linenumber">52</context></context-group></trans-unit><trans-unit id="summaryTableHasDisabledPerson" datatype="html" approved="yes">
+        <source>Has disabled person :</source><target state="translated">Présence de personnes handicapées :</target> <note priority="1" from="description">has disabled person text </note>
+        <note priority="1" from="meaning">summary table</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/reservation-dashboard-page/reservation-dashboard-page.component.html</context><context context-type="linenumber">89</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/summary-page/summary-page.component.html</context><context context-type="linenumber">58</context></context-group></trans-unit><trans-unit id="YesText" datatype="html" approved="yes">
+        <source>Yes</source><target state="translated">Oui</target> <note priority="1" from="description"> yes text </note>
+        <note priority="1" from="meaning">group has disabled person </note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/reservation-dashboard-page/reservation-dashboard-page.component.html</context><context context-type="linenumber">93</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/welcome-page/welcome-page.component.html</context><context context-type="linenumber">33</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/summary-page/summary-page.component.html</context><context context-type="linenumber">62</context></context-group></trans-unit><trans-unit id="NoText" datatype="html" approved="yes">
+        <source>No</source><target state="translated">Non</target> <note priority="1" from="description"> no text </note>
+        <note priority="1" from="meaning">group has disabled person </note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/reservation-dashboard-page/reservation-dashboard-page.component.html</context><context context-type="linenumber">95</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/welcome-page/welcome-page.component.html</context><context context-type="linenumber">35</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/summary-page/summary-page.component.html</context><context context-type="linenumber">64</context></context-group></trans-unit><trans-unit id="summaryTableTransportTypeText" datatype="html" approved="yes">
+        <source>Transport</source><target state="translated">Transport</target> <note priority="1" from="description"> registration text </note>
+        <note priority="1" from="meaning">summary table</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/reservation-dashboard-page/reservation-dashboard-page.component.html</context><context context-type="linenumber">102</context></context-group></trans-unit><trans-unit id="summaryTableOriginText" datatype="html" approved="yes">
+        <source>Origin :</source><target state="translated">Lieu de départ :</target> 
+        <note priority="1" from="description">origin text </note>
+        <note priority="1" from="meaning">summary table</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/reservation-dashboard-page/reservation-dashboard-page.component.html</context><context context-type="linenumber">112</context></context-group></trans-unit><trans-unit id="summaryTableTypeText" datatype="html" approved="yes">
+        <source>Type :</source><target state="translated">Type :</target> 
+        <note priority="1" from="description">type text </note>
+        <note priority="1" from="meaning">summary table</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/reservation-dashboard-page/reservation-dashboard-page.component.html</context><context context-type="linenumber">120</context></context-group></trans-unit>
+      <trans-unit id="registrationDashboardPageCancelButtonText" datatype="html" approved="yes">
+        <source>Cancel registration</source><target state="translated">Annuler l'inscription</target> <note priority="1" from="description">cancel button on registration </note>
+        <note priority="1" from="meaning">registration dashboard page </note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/reservation-dashboard-page/reservation-dashboard-page.component.html</context><context context-type="linenumber">133</context></context-group></trans-unit><trans-unit id="registrationDashboardPageResendConfrimationButtonText" datatype="html" approved="yes">
+        <source>Resend confirmation</source><target state="translated">Renvoyer confirmation</target> 
+        <note priority="1" from="description">resend confirmation button on registration </note>
+        <note priority="1" from="meaning">registration dashboard page </note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/reservation-dashboard-page/reservation-dashboard-page.component.html</context><context context-type="linenumber">136</context></context-group></trans-unit><trans-unit id="navigationButtonCancel" datatype="html" approved="yes">
+        <source>Cancel</source><target state="translated">Annuler</target> <note priority="1" from="description">button cancel </note>
+        <note priority="1" from="meaning">workflow navigation button</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/transport-type-selector-page/transport-type-selector-page.component.html</context><context context-type="linenumber">28</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/arrival-selector-page/arrival-selector-page.component.html</context><context context-type="linenumber">26</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/summary-page/summary-page.component.html</context><context context-type="linenumber">110</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/visitors-detail-page/visitors-detail-page.component.html</context><context context-type="linenumber">25</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/update-arrival-point/update-arrival-point.component.html</context><context context-type="linenumber">24</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/update-visitor-details/update-visitor-details.component.html</context><context context-type="linenumber">22</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/update-transport-type/update-transport-type.component.html</context><context context-type="linenumber">25</context></context-group></trans-unit><trans-unit id="noLHCTicketsDialogTitleText" datatype="html" approved="yes">
+        <source>Fast Track LHC warning !</source><target state="translated">Disponibilité Fast Track LHC !</target> 
+        <note priority="1" from="description"> dialog header </note>
+        <note priority="1" from="meaning">dialog no fast track lhc tickets</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Dialogs/no-fast-track-lhc-dialog/no-fast-track-lhc-dialog.component.html</context><context context-type="linenumber">7</context></context-group></trans-unit><trans-unit id="noLHCTicketsDialogConfirmationText" datatype="html" approved="yes">
+        <source>There are no Fast Track LHC tickets for this slot do you want to proceed ?</source><target state="translated">Il n'y pas de ticket FAST Track LHC disponible pour votre sélection, voulez-vous continuer quand même?</target> 
+        
+        <note priority="1" from="description"> confirmation text  </note>
+        <note priority="1" from="meaning">dialog no fast track lhc tickets text</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Dialogs/no-fast-track-lhc-dialog/no-fast-track-lhc-dialog.component.html</context><context context-type="linenumber">10</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Dialogs/no-fast-track-lhc-dialog/no-fast-track-lhc-dialog.component.html</context><context context-type="linenumber">12</context></context-group></trans-unit><trans-unit id="noLHCTicketsDialogNoButton" datatype="html" approved="yes">
+        <source>No</source><target state="translated">Non</target> 
+        <note priority="1" from="description"> no button </note>
+        <note priority="1" from="meaning">dialog cancel reservation button</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Dialogs/no-fast-track-lhc-dialog/no-fast-track-lhc-dialog.component.html</context><context context-type="linenumber">17</context></context-group></trans-unit><trans-unit id="yesLHCTicketsDialogNoButton" datatype="html" approved="yes">
+        <source>Yes</source><target state="translated">Oui</target> 
+        <note priority="1" from="description"> yes button </note>
+        <note priority="1" from="meaning">dialog cancel reservation button</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Dialogs/no-fast-track-lhc-dialog/no-fast-track-lhc-dialog.component.html</context><context context-type="linenumber">19</context></context-group></trans-unit><trans-unit id="navigationUpdateNext" datatype="html" approved="yes">
+        <source>Update</source><target state="translated">Mettre à jour</target> 
+        
+        
+        <note priority="1" from="description">button update </note>
+        <note priority="1" from="meaning">workflow navigation button</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/update-arrival-point/update-arrival-point.component.html</context><context context-type="linenumber">28</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/update-visitor-details/update-visitor-details.component.html</context><context context-type="linenumber">26</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Pages/update-transport-type/update-transport-type.component.html</context><context context-type="linenumber">29</context></context-group></trans-unit><trans-unit id="arrivalPointSelectorSelectDayHeaderText" datatype="html" approved="yes">
+        <source>Select your visit date</source><target state="translated">Sélectionnez votre date de visite</target> 
+        <note priority="1" from="description"> header select visit day text </note>
+        <note priority="1" from="meaning">arrival point selector</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Components/arrival-date-selector/arrival-date-selector.component.html</context><context context-type="linenumber">8</context></context-group></trans-unit><trans-unit id="arrivalPointSelectorMainInstructionText" datatype="html" approved="yes">
+        <source>Here you choose the site and time of your arrival. It is on that site and at that time that you will get bracelets to get access to all sites and activities until the closing time that day.Please note that this registration does not guarantee a visit to the LHC as capacity for these visits is limited. However, it does guarantee access to many other exciting visits and activities on the surface.</source><target state="translated">Ici, vous choisissez votre site et votre heure d'arrivée. Depuis là, vous aurez accès à tous les sites et activités jusqu'à l'heure de fermeture du jour. Veuillez noter que cette inscription ne garantit pas une visite du LHC étant donné la capacité limitée pour ces visites. Néanmoins, elle garantit l'accès à de nombreuses visites et activités de surface tout aussi intéressantes.</target> <note priority="1" from="description"> main instruction text </note>
+        <note priority="1" from="meaning">arrival point selector</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Components/arrival-point-instructions/arrival-point-instructions.component.html</context><context context-type="linenumber">10</context></context-group></trans-unit>
+      
+      <trans-unit id="arrivalPointSelectorSelectTimeslotHeaderText" datatype="html" approved="yes">
+        <source>Select site and time of arrival</source><target state="translated">Sélectionnez votre site et votre heure d'arrivée</target> <note priority="1" from="description"> header select timeslot text </note>
+        <note priority="1" from="meaning">arrival point selector page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Components/entrance-selector/entrance-selector.component.html</context><context context-type="linenumber">7</context></context-group></trans-unit>
+      <trans-unit id="loginPageHeaderText" datatype="html" approved="yes">
+        <source>Login with your valid passcode</source><target state="translated">Se connecter avec un code d'accès valide</target> 
+        <note priority="1" from="description"> header text </note>
+        <note priority="1" from="meaning">login page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/request-token-page/request-token-page.component.html</context><context context-type="linenumber">8</context></context-group></trans-unit>
+      <trans-unit id="loginPageInstructionText" datatype="html" approved="yes">
+        <source>Enter your email address and the passcode we sent you.</source><target state="signed-off">Entrez votre adresse électronique et le code d'accès que nous venons de vous envoyer. Un code d'accès n'est valide qu'une fois et uniquement durant 30 minutes après avoir été envoyé.</target> 
+        <note priority="1" from="description"> instruction </note>
+        <note priority="1" from="meaning">login page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/request-token-page/request-token-page.component.html</context><context context-type="linenumber">9</context></context-group></trans-unit>
+      <trans-unit id="loginPageButtonText" datatype="html" approved="yes">
+        <source>Login</source><target state="translated">Connexion</target> 
+        <note priority="1" from="description"> login button text </note>
+        <note priority="1" from="meaning">login page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/request-token-page/request-token-page.component.html</context><context context-type="linenumber">30</context></context-group></trans-unit>
+      <trans-unit id="welcomePageHeader" datatype="html" approved="yes">
+        <source>Welcome to CERN Open Days registration system</source><target state="translated">Bienvenue sur le système d’inscription aux journées portes ouvertes du CERN</target> 
+        <note priority="1" from="description"> page starting header</note>
+        <note priority="1" from="meaning">welcome page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/welcome-page/welcome-page.component.html</context><context context-type="linenumber">8</context></context-group></trans-unit>
+      <trans-unit id="welcomePageFreeEventText" datatype="html" approved="yes">
+        <source>The CERN Open Days is a free event, but registration is required to guarantee your access to the sites.</source><target state="translated">Les journées portes ouvertes sont gratuites, mais il est nécessaire de vous inscrire pour garantir votre accès aux sites.</target> 
+        <note priority="1" from="description"> free event description text </note>
+        <note priority="1" from="meaning">welcome page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/welcome-page/welcome-page.component.html</context><context context-type="linenumber">10</context></context-group></trans-unit><trans-unit id="welcomePageAvailablePlacesVisitDayHeaderText" datatype="html" approved="yes">
+        <source>Visit day</source><target state="translated">Jour de visite</target> 
+        <note priority="1" from="description"> available places table header visitday text </note>
+        <note priority="1" from="meaning">welcome page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/welcome-page/welcome-page.component.html</context><context context-type="linenumber">22</context></context-group></trans-unit><trans-unit id="welcomePageAvailablePlacesTicketsAvailableHeaderText" datatype="html" approved="yes">
+        <source>Tickets available</source><target state="translated">Ticket disponible </target> 
+        <note priority="1" from="description"> available places table header tickets available text </note>
+        <note priority="1" from="meaning">welcome page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/welcome-page/welcome-page.component.html</context><context context-type="linenumber">25</context></context-group></trans-unit>
+      <trans-unit id="welcomePageMoreInfoText" datatype="html" approved="yes">
+        <source>More information on why and how to register is available </source><target state="translated">Plus d'informations sur le système d’inscription sont disponibles</target> <note priority="1" from="description"> more information about the event description text </note>
+        <note priority="1" from="meaning">welcome page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/welcome-page/welcome-page.component.html</context><context context-type="linenumber">41</context></context-group></trans-unit>
+      <trans-unit id="welcomePageMoreInfoLinkText" datatype="html" approved="yes">
+        <source>here</source><target state="translated"> ici</target> <note priority="1" from="description"> more information link text </note>
+        <note priority="1" from="meaning">welcome page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/welcome-page/welcome-page.component.html</context><context context-type="linenumber">43</context></context-group></trans-unit>
+      <trans-unit id="welcomePageLoginWithPasscodeCardTitle" datatype="html" approved="yes">
+        <source>Login with your valid passcode</source><target state="translated">Connectez-vous avec un code d'accès valide</target> <note priority="1" from="description"> login with passcode card title </note>
+        <note priority="1" from="meaning">welcome page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/welcome-page/welcome-page.component.html</context><context context-type="linenumber">53</context></context-group></trans-unit>
+      <trans-unit id="welcomePageLoginWithPasscodeCardContent" datatype="html" approved="yes">
+        <source>The passcode you will use must have been issued less than 30 minutes ago. Otherwise request a new passcode.</source><target state="translated">Le code d'accès que vous utiliserez doit avoir été émis il y a moins de 30 minutes et n'avoir jamais été utlisé. Si ce n’est pas le cas, demandez un nouveau code d'accès.</target> <note priority="1" from="description"> login with passcode card description </note>
+        <note priority="1" from="meaning">welcome page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/welcome-page/welcome-page.component.html</context><context context-type="linenumber">60</context></context-group></trans-unit>
+      <trans-unit id="welcomePageRequestPasscodeCardTitle" datatype="html" approved="yes">
+        <source>Request new passcode by email</source><target state="translated">Demandez un nouveau code d'accès par courriel.</target> <note priority="1" from="description"> request passcode card title </note>
+        <note priority="1" from="meaning">welcome page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/welcome-page/welcome-page.component.html</context><context context-type="linenumber">74</context></context-group></trans-unit>
+      <trans-unit id="welcomePageRequestPasscodeCardContent" datatype="html" approved="yes">
+        <source>The passcode will be sent by email and be valid for 30 minutes. It will allow you to login for registration.</source><target state="translated">Le code d'accès vous sera envoyé par courriel et sera valide pendant 30 minutes et uniquement une fois. Il vous permettra de vous connecter pour vous inscrire.</target> <note priority="1" from="description"> request passcode card description </note>
+        <note priority="1" from="meaning">welcome page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/welcome-page/welcome-page.component.html</context><context context-type="linenumber">80</context></context-group></trans-unit>
+      <trans-unit id="requestPasscodePageHeaderText" datatype="html" approved="yes">
+        <source>Request a new passcode by email</source><target state="translated">Demandez un nouveau code d'accès par courriel.</target> 
+        <note priority="1" from="description"> header text </note>
+        <note priority="1" from="meaning">request passcode page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/request-passcode-page/request-passcode-page.component.html</context><context context-type="linenumber">8</context></context-group></trans-unit>
+      <trans-unit id="requestPasscodePageInstructionText" datatype="html" approved="yes">
+        <source>Enter your email address and
+      we will send you the passcode.</source><target state="translated">Entrez votre adresse électronique ; vous recevrez alors le code d'acccès par courriel.</target> 
+        <note priority="1" from="description"> instruction text </note>
+        <note priority="1" from="meaning">request passcode page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/request-passcode-page/request-passcode-page.component.html</context><context context-type="linenumber">10</context></context-group></trans-unit>
+      <trans-unit id="requestPasscodePageSuccessfulText" datatype="html" approved="yes">
+        <source>Soon you will receive an email with your access to the registration page. If you haven’t received it in your inbox, please check your spam folders..</source><target state="translated">Vous recevrez bientôt un courriel avec votre code d'accès pour vous inscrire. Si vous ne le recevez pas, vérifiez les dossiers de courriel non désiré (spam, etc).</target> 
+        <note priority="1" from="description"> successfully requested passcode text </note>
+        <note priority="1" from="meaning">request passcode page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/request-passcode-page/request-passcode-page.component.html</context><context context-type="linenumber">13</context></context-group></trans-unit>
+      <trans-unit id="requestPasscodePageRequestNavigateToLoginButtonText" datatype="html" approved="yes">
+        <source>Login with passcode</source><target state="translated">Connexion avec code d'accès</target> 
+        <note priority="1" from="description"> navigate to login </note>
+        <note priority="1" from="meaning">request passcode page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/request-passcode-page/request-passcode-page.component.html</context><context context-type="linenumber">18</context></context-group></trans-unit>
+      <trans-unit id="personalDataAgreementPart1" datatype="html" approved="yes">
+        <source>I understand that,my personal data will be processed by CERN in accordance with the terms of the
+            </source><target state="translated">Je prends note que certaines données à caractère personnel seront traitées par le CERN conformément à </target> 
+        <note priority="1" from="description"> personal data agreement part 1</note>
+        <note priority="1" from="meaning">request passcode page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/request-passcode-page/request-passcode-page.component.html</context><context context-type="linenumber">42</context></context-group></trans-unit>
+      <trans-unit id="personalDataAgreementPart2" datatype="html" approved="yes">
+        <source>Open Days 2019 Visitors Registration Privacy Notice</source><target state="translated">l’avis sur l’utilisation des données à caractère personnel concernant l’inscription des visiteurs aux journées portes ouvertes 2019 du CERN</target> 
+        <note priority="1" from="description"> personal data agreement part 2 link of privacy notice</note>
+        <note priority="1" from="meaning">request passcode page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/request-passcode-page/request-passcode-page.component.html</context><context context-type="linenumber">46</context></context-group></trans-unit>
+      <trans-unit id="personalDataAgreementPart3" datatype="html" approved="yes">
+        <source>and the</source><target state="signed-off"> et </target> 
+        <note priority="1" from="description"> personal data agreement part 3 link between text </note>
+        <note priority="1" from="meaning">request passcode page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/request-passcode-page/request-passcode-page.component.html</context><context context-type="linenumber">48</context></context-group></trans-unit>
+      <trans-unit id="personalDataAgreementPart4" datatype="html" approved="yes">
+        <source>CERN Site Security Privacy Notice.</source><target state="translated">à celui concernant l’accès au CERN.</target> 
+        <note priority="1" from="description"> personal data agreement part 3 link site security </note>
+        <note priority="1" from="meaning">request passcode page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/request-passcode-page/request-passcode-page.component.html</context><context context-type="linenumber">51</context></context-group></trans-unit>
+      <trans-unit id="imageTakenAgreement" datatype="html" approved="yes">
+        <source>I acknowledge that,as a consequence of visiting CERN, my image may be captured in photographs and recordings made by professional photographers engaged by CERN as well as visitors to Open Days. To the extent that I do not wish to be in such photographs and recordings I recognise that it is my responsibility to take measures to ensure that my image is not captured. I further understand and accept that CERN bears no responsibility for the photographs and recordings taken by visitors on the CERN site.</source><target state="translated">J’ai conscience du fait que je peux apparaître sur des photos et des vidéos prises par des photographes professionnels engagés par le CERN ou par des visiteurs. Je reconnais qu’il est de ma responsabilité de prendre les mesures adéquates afin de ne pas apparaître sur des photos ou des vidéos. J’admets que le CERN ne pourra être tenu responsable des photos ou des vidéos prises par d’autres visiteurs sur le site du CERN. Au cas où j’enregistre d’autres personnes que moi, je confirme que mon accord s’applique également à celles-ci.</target> 
+        <note priority="1" from="description"> image taken agreement </note>
+        <note priority="1" from="meaning">request passcode page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/request-passcode-page/request-passcode-page.component.html</context><context context-type="linenumber">55</context></context-group></trans-unit>
+      <trans-unit id="requestPasscodePageRequestPasscodeButtonText" datatype="html" approved="yes">
+        <source>Request passcode</source><target state="translated">Demander un code d'accès</target> 
+        <note priority="1" from="description"> request passcode button text </note>
+        <note priority="1" from="meaning">request passcode page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/request-passcode-page/request-passcode-page.component.html</context><context context-type="linenumber">65</context></context-group></trans-unit>
+      <trans-unit id="summaryPageHeader" datatype="html" approved="yes">
+        <source>Registration confirmation</source><target state="translated">Confirmation d'inscription</target> 
+        <note priority="1" from="description">summary page header </note>
+        <note priority="1" from="meaning">summary page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/summary-page/summary-page.component.html</context><context context-type="linenumber">8</context></context-group></trans-unit>
+      <trans-unit id="summaryPageConfirmationText" datatype="html" approved="yes">
+        <source>Shortly after you finish your reservation, you will receive a confirmation email with a QR code.</source><target state="translated">Vous y êtes presque. Veuillez vérifier votre inscription ci-dessous et validez-la en cliquant sur "Suivant", sinon cliquez sur "Précédent" pour la modifier. Juste après avoir terminé votre inscription, vous recevrez un courriel de confirmation avec un QR code. Veuillez apporter le QR code avec vous aux portes ouvertes du CERN.</target> 
+        <note priority="1" from="description"> confirmation text </note>
+        <note priority="1" from="meaning">summary page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/summary-page/summary-page.component.html</context><context context-type="linenumber">10</context></context-group></trans-unit>
+      <trans-unit id="summaryPageSummaryTableTransportTypeText" datatype="html" approved="yes">
+        <source>Transport</source><target state="translated">Moyen de transport</target> <note priority="1" from="description"> summary table transport type text </note>
+        <note priority="1" from="meaning">summary page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/summary-page/summary-page.component.html</context><context context-type="linenumber">70</context></context-group></trans-unit><trans-unit id="summaryPageSummaryTableointOfOriginText" datatype="html" approved="yes">
+        <source>Origin :</source><target state="translated">Lieu de départ :</target> 
+        <note priority="1" from="description">origin text </note>
+        <note priority="1" from="meaning">summary page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/summary-page/summary-page.component.html</context><context context-type="linenumber">75</context></context-group></trans-unit><trans-unit id="summaryPageSummaryTableTypeText" datatype="html" approved="yes">
+        <source>Type :</source><target state="translated">Type :</target> 
+        <note priority="1" from="description">type text </note>
+        <note priority="1" from="meaning">summary page</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Pages/summary-page/summary-page.component.html</context><context context-type="linenumber">83</context></context-group></trans-unit>
+      
+      
+      
+      <trans-unit id="arrivalPointMobileHasUndergroundActivitiesText" datatype="html" approved="yes">
+        <source>This site offers one LHC visit point</source><target state="translated">Ce site propose un point de visite LHC.</target> 
+        <note priority="1" from="description"> mobile has underground activities text</note>
+        <note priority="1" from="meaning">arrival point selector</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Components/entrance-selector-mobile/entrance-selector-mobile.component.html</context><context context-type="linenumber">26</context></context-group></trans-unit>
+      <trans-unit id="arrivalPointNbrOfSurfaceActivitiesText" datatype="html" approved="yes">
+        <source>Number of surface activities :</source><target state="translated">Nombre d'activités en surface :</target> 
+        
+        <note priority="1" from="description">number of surface activities text</note>
+        <note priority="1" from="meaning">arrival point selector</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Components/entrance-selector-mobile/entrance-selector-mobile.component.html</context><context context-type="linenumber">32</context></context-group><context-group purpose="location"><context context-type="sourcefile">app/Components/entrance-selector-desktop/entrance-selector-desktop.component.html</context><context context-type="linenumber">16</context></context-group></trans-unit>
+      <trans-unit id="arrivalPointDesktopHasUndergroundActivitiesText" datatype="html" approved="yes">
+        <source>Has LHC visit</source><target state="translated">Propose des visites LHC</target> 
+        <note priority="1" from="description"> desktop has underground activities text</note>
+        <note priority="1" from="meaning">arrival point selector</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Components/entrance-selector-desktop/entrance-selector-desktop.component.html</context><context context-type="linenumber">24</context></context-group></trans-unit>
+      <trans-unit id="undergroundVisitYes" datatype="html" approved="yes">
+        <source>Yes</source><target state="translated">Oui</target> 
+        <note priority="1" from="description"> yes text </note>
+        <note priority="1" from="meaning">arrival point underground </note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Components/entrance-selector-desktop/entrance-selector-desktop.component.html</context><context context-type="linenumber">27</context></context-group></trans-unit>
+      <trans-unit id="undergroundVisitNo" datatype="html" approved="yes">
+        <source>No</source><target state="translated">Non</target> 
+        <note priority="1" from="description"> no text </note>
+        <note priority="1" from="meaning">arrival point underground </note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Components/entrance-selector-desktop/entrance-selector-desktop.component.html</context><context context-type="linenumber">28</context></context-group></trans-unit><trans-unit id="transportTypesInstructionHeader" datatype="html" approved="yes">
+        <source>Types of transport</source><target state="translated">Moyens de transport</target> 
+        <note priority="1" from="description"> transport type selector instructuin header text </note>
+        <note priority="1" from="meaning">transport type selector instruction</note>
+      <context-group purpose="location"><context context-type="sourcefile">app/Components/transport-type-selector/transport-type-selector.component.html</context><context context-type="linenumber">9</context></context-group></trans-unit>
+    </body>
+  </file>
+</xliff>

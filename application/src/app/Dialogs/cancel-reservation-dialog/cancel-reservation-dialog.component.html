@@ -1,0 +1,14 @@
+<!-- Copyright (C) 2019, CERN
+This software is distributed under the terms of the GNU General Public
+Licence version 3 (GPL Version 3), copied verbatim in the file "LICENSE".
+In applying this license, CERN does not waive the privileges and immunities
+granted to it by virtue of its status as Intergovernmental Organization
+or submit itself to any jurisdiction. -->
+<h1 mat-dialog-title i18n="dialog cancel reservation| dialog header text @@cancelReservationDiaologHeaderText">Reservation cancellation</h1>
+<div mat-dialog-content>
+   <p i18n="dialog cancel reservation| confirmation question text @@cancelReservationDiaologConfirmationText">Are you sure you want to cancel your reservation for {{data.visitDay}}?</p>
+</div>
+<div mat-dialog-actions>
+   <button mat-button mat-stroked-button [mat-dialog-close]="0" cdkFocusInitial i18n="dialog cancel reservation| no thanks button @@cancelReservationDiaologNoThanksButton">No Thanks</button>
+   <button mat-button mat-stroked-button [mat-dialog-close]="data.idReservation" i18n="dialog cancel reservation| ok button @@cancelReservationDiaologOkButton">Ok</button>
+</div>

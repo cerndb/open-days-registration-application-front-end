@@ -1,0 +1,35 @@
+<!-- Copyright (C) 2019, CERN
+This software is distributed under the terms of the GNU General Public
+Licence version 3 (GPL Version 3), copied verbatim in the file "LICENSE".
+In applying this license, CERN does not waive the privileges and immunities
+granted to it by virtue of its status as Intergovernmental Organization
+or submit itself to any jurisdiction. -->
+<div>&nbsp;</div>
+<div>
+   <div *ngIf="errorMessageVisible" class="error-message">
+      {{errorMessageText}}
+   </div>
+   <span><button mat-icon-button (click)="removeVisitor()">
+         <mat-icon aria-label="Remove visitor">remove_circle_outline</mat-icon>
+      </button>
+   </span>
+   <span>&nbsp;&nbsp;&nbsp;</span>
+   <span>
+      <mat-form-field>
+         <input matInput [(ngModel)]="visitorAge" (keyup)="onKey($event)" placeholder="age" required>
+      </mat-form-field>
+   </span>
+   <span>&nbsp;&nbsp;&nbsp;</span>
+   <span>
+      <mat-checkbox [(ngModel)]="visitorDetail.fastTrackSelected" (change)="fastTrackRequestChange($event)"
+         [disabled]="fastTrackDisabled || !fastTrackAllowed">
+         Fast Track LHC
+      </mat-checkbox>
+   </span>
+   <span>&nbsp;</span>
+   <span>
+      <a href="{{moreInformationURL}}" target="_blank">
+         <mat-icon aria-label="info"> info_outline</mat-icon>
+      </a>
+   </span>
+</div>

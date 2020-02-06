@@ -1,0 +1,19 @@
+<!-- Copyright (C) 2019, CERN
+This software is distributed under the terms of the GNU General Public
+Licence version 3 (GPL Version 3), copied verbatim in the file "LICENSE".
+In applying this license, CERN does not waive the privileges and immunities
+granted to it by virtue of its status as Intergovernmental Organization
+or submit itself to any jurisdiction. -->
+<app-arrival-point-instructions [deviceIsMobile]="deviceIsMobile"></app-arrival-point-instructions>
+<h2 i18n="arrival point selector| header select visit day text @@arrivalPointSelectorSelectDayHeaderText">
+   Select your visit date</h2>
+<div *ngIf="arrivalDates.length>0">
+   <mat-radio-group aria-labelledby="arrival-date-radio-label" class="arrival-date-radio-group selectedRadio"
+      [(ngModel)]="selectedDate" (change)="emitDateChange($event);">
+      <mat-radio-button class="arrival-date-radio-button" *ngFor="let arrivalDate of arrivalDates"
+         [value]="arrivalDate.value">
+         {{arrivalDate.displayName}}
+      </mat-radio-button>
+   </mat-radio-group>
+   <div>&nbsp;</div>
+</div>

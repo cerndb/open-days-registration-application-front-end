@@ -1,0 +1,38 @@
+<!-- Copyright (C) 2019, CERN
+This software is distributed under the terms of the GNU General Public
+Licence version 3 (GPL Version 3), copied verbatim in the file "LICENSE".
+In applying this license, CERN does not waive the privileges and immunities
+granted to it by virtue of its status as Intergovernmental Organization
+or submit itself to any jurisdiction. -->
+<table class="timetable">
+   <tr>
+      <th></th>
+      <th *ngFor="let arrivalPointHeader of timetable.arrivalPointTableHeaders">
+         <a href="{{arrivalPointHeader.arrivalPointAccessibilityURL}}"
+            target="_blank">{{arrivalPointHeader.arrivalPointName}}</a>
+      </th>
+   </tr>
+   <tr>
+      <td i18n="arrival point selector|number of surface activities text@@arrivalPointNbrOfSurfaceActivitiesText">Number
+         of surface activities :</td>
+      <td *ngFor="let arrivalPoint of timetable.arrivalPoints" class="activity-tablerows-borders">
+         <a href="{{arrivalPoint.siteActivitiesInfoURL}}" target="_blank">{{arrivalPoint.numberOfSurfaceActivities}}</a>
+      </td>
+   </tr>
+   <tr>
+      <td
+         i18n="arrival point selector| desktop has underground activities text@@arrivalPointDesktopHasUndergroundActivitiesText">
+         Has LHC visit</td>
+      <td *ngFor="let arrivalPoint of timetable.arrivalPoints" class="activity-tablerows-borders">
+         <span *ngIf="arrivalPoint.numberOfUndergroundActivities>0" i18n="arrival point underground | yes text @@undergroundVisitYes">Yes</span>
+         <span *ngIf="arrivalPoint.numberOfUndergroundActivities<1" i18n="arrival point underground | no text @@undergroundVisitNo">No</span>
+      </td>
+   </tr>
+   <tr *ngFor="let timeslot of timetable.timeslots;index as timeslotIndex;">
+      <td>{{timeslot.startDate}} - {{timeslot.endDate}}</td>
+      <td *ngFor="let arrivalPoint of timetable.arrivalPoints">
+         <app-arrival-timeslot-button [timeslot]="arrivalPoint.openTimeslots[timeslotIndex]"
+            (selectedTimeslot)="timeslotSelected($event);"></app-arrival-timeslot-button>
+      </td>
+   </tr>
+</table>

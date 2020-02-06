@@ -1,0 +1,118 @@
+<!-- Copyright (C) 2019, CERN
+This software is distributed under the terms of the GNU General Public
+Licence version 3 (GPL Version 3), copied verbatim in the file "LICENSE".
+In applying this license, CERN does not waive the privileges and immunities
+granted to it by virtue of its status as Intergovernmental Organization
+or submit itself to any jurisdiction. -->
+<div class="summary-page" [ngClass]="{'centered-div': !deviceIsMobile}">
+   <h1 class="center-aligned" i18n="summary page|summary page header @@summaryPageHeader">Registration confirmation</h1>
+   <div [ngClass]="{'summary-description': deviceIsMobile}"
+      i18n="summary page| confirmation text @@summaryPageConfirmationText">Shortly after you finish your reservation,
+      you will receive a confirmation email with a QR code.</div>
+   <div>&nbsp;</div>
+   <div class="center-aligned">
+      <div *ngIf="reservationIsLoaded" class="summary-page__card-container">
+         <mat-card class="summary-page__card-container__card">
+            <mat-card-header>
+               <mat-card-title>{{reservation.visitDay}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+               <table class="summary-page__card-container__card__table">
+                  <tr>
+                     <td colspan="2" class="center-aligned summary-page__card-container__card__table__separator">
+                        <strong i18n="summary table| arrival point text @@summaryTableArrivalPointText">Arrival</strong>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td i18n="summary table| arrival point name text @@summaryTableArrivalPointNameText"
+                        class="summary-page__card-container__card__table__left-ordered-column">Site :</td>
+                     <td class="summary-page__card-container__card__table__right-ordered-column">
+                        {{reservation.nameArrivalPoint}}</td>
+                  </tr>
+                  <tr>
+                     <td i18n="summary table| arrival point timeslot text @@summaryTableArrivalPointTimeslotText"
+                        class="summary-page__card-container__card__table__left-ordered-column">Timeslot
+                        :</td>
+                     <td class="summary-page__card-container__card__table__right-ordered-column">
+                        {{reservation.arrivalTimeslotStart}} - {{reservation.arrivalTimeslotEnd}}</td>
+                  </tr>
+                  <tr>
+                     <td colspan="2" class="center-aligned summary-page__card-container__card__table__separator">
+                        <strong i18n="summary table| visitors text @@summaryTableVisitorsText">Visitors</strong>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td i18n="summary table| simple text @@summaryTableSimpleText"
+                        class="summary-page__card-container__card__table__left-ordered-column">Standard :</td>
+                     <td class="summary-page__card-container__card__table__right-ordered-column">
+                        {{reservation.numberOfBookedStandardTickets}}</td>
+                  </tr>
+                  <tr>
+                     <td i18n="summary table|fast track text @@summaryTableFastTrackText"
+                        class="summary-page__card-container__card__table__left-ordered-column">Fast Track LHC :</td>
+                     <td class="summary-page__card-container__card__table__right-ordered-column">
+                        {{reservation.numberOfBookedFastTrackTickets}}</td>
+                  </tr>
+                  <tr>
+                     <td i18n="summary table|has disabled person text @@summaryTableHasDisabledPerson"
+                        class="summary-page__card-container__card__table__left-ordered-column">
+                        Has disabled person :</td>
+                     <td class="summary-page__card-container__card__table__right-ordered-column">
+                        <span *ngIf="reservation.groupHasDisabledMobility>0"
+                           i18n="group has disabled person | yes text @@YesText">Yes</span>
+                        <span *ngIf="reservation.groupHasDisabledMobility<1"
+                           i18n="group has disabled person | no text @@NoText">No</span>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td colspan="2" class="center-aligned summary-page__card-container__card__table__separator">
+                        <strong
+                           i18n="summary page| summary table transport type text @@summaryPageSummaryTableTransportTypeText">Transport</strong>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td i18n="summary page|origin text @@summaryPageSummaryTableointOfOriginText"
+                        class="summary-page__card-container__card__table__left-ordered-column">
+                        Origin :</td>
+                     <td class="summary-page__card-container__card__table__right-ordered-column">
+                        <span>{{reservation.pointOfOriginDisplayName}}</span>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td i18n="summary page|type text @@summaryPageSummaryTableTypeText"
+                        class="summary-page__card-container__card__table__left-ordered-column">
+                        Type :</td>
+                     <td class="summary-page__card-container__card__table__right-ordered-column">
+                        <div *ngFor="let transportType of reservation.transportTypes; index as transportTypeIndex;">
+                           <span>{{transportType.displayName}}</span>
+                           <span *ngIf="transportTypeIndex<reservation.transportTypes.length-1">, </span>
+                        </div>
+                     </td>
+                  </tr>
+               </table>
+            </mat-card-content>
+         </mat-card>
+      </div>
+   </div>
+   <div *ngIf="pageHasError">
+      <div>&nbsp;</div>
+      <span class="error-message">{{pageErrorMessage}}</span>
+   </div>
+   <div>&nbsp;</div>
+   <div class="center-aligned">
+      <div class="navigation-buttons">
+         <div class="navigation-button">
+            <button mat-stroked-button (click)="backStep();" mat-button
+               i18n="workflow navigation button|button back @@navigationButtonBack">Back</button>
+         </div>
+         <div class="navigation-button">
+            <button mat-stroked-button (click)="cancelProcess();" mat-button
+               i18n="workflow navigation button|button cancel @@navigationButtonCancel">Cancel</button>
+         </div>
+         <div class="navigation-button">
+            <button mat-stroked-button (click)="finishReservation();" mat-button
+               i18n="workflow navigation button|button next @@navigationButtonNext">Finish</button>
+         </div>
+      </div>
+   </div>
+</div>
