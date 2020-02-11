@@ -1,0 +1,29 @@
+<!-- Copyright (C) 2019, CERN
+This software is distributed under the terms of the GNU General Public
+Licence version 3 (GPL Version 3), copied verbatim in the file "LICENSE".
+In applying this license, CERN does not waive the privileges and immunities
+granted to it by virtue of its status as Intergovernmental Organization
+or submit itself to any jurisdiction. -->
+<div class="center-aligned">
+   <h1 [ngClass]="{'center-aligned': deviceIsMobile}"
+      i18n="transport type selector instruction| transport type selector instructuin header text @@transportTypesInstructionHeader">
+      Types of transport</h1>
+   <div
+      [ngClass]="{'transport-type-selector__detail-description-div': !deviceIsMobile,'transport-type-selector__detail-description-div--mob': deviceIsMobile}">
+      <span
+         i18n="transport type selector instruction| transport type selector instructuin text @@transportTypesInstructionText">To
+         help us organizing the event, please let us know what transportation mean you plan to use to reach your arrival
+         point.</span>
+   </div>
+</div>
+<div>&nbsp;</div>
+<div [ngClass]="{'radio-container-desktop': !deviceIsMobile}">
+   <section [ngClass]="{'transport-type-selection-section': deviceIsMobile}">
+      <mat-radio-group [(ngModel)]="selectedTransportType" class="transport-type-selector__radio-group">
+         <mat-radio-button *ngFor="let transportType of transportTypes;" [value]="transportType.idTransportType"
+            class="transport-type-selector__radio-group__element" (change)="transportTypeChange($event)">
+            {{transportType.displayName}}
+         </mat-radio-button>
+      </mat-radio-group>
+   </section>
+</div>

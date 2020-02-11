@@ -1,0 +1,32 @@
+<!-- Copyright (C) 2019, CERN
+This software is distributed under the terms of the GNU General Public
+Licence version 3 (GPL Version 3), copied verbatim in the file "LICENSE".
+In applying this license, CERN does not waive the privileges and immunities
+granted to it by virtue of its status as Intergovernmental Organization
+or submit itself to any jurisdiction. -->
+<div class="request-token-page centered-div">
+   <h1 i18n="login page| header text @@loginPageHeaderText">Login with your valid passcode</h1>
+   <div i18n="login page| instruction @@loginPageInstructionText">Enter your email address and the passcode we sent you.</div>
+   <div class="general-form-inputs">
+      <input [(ngModel)]="requestTokenMessage.firstname253589667" type="text" />
+      <input [(ngModel)]="requestTokenMessage.lastname345996689" type="text" />
+      <input [(ngModel)]="requestTokenMessage.phone268459683" type="text" />
+   </div>
+   <div class="center-aligned">
+      <div *ngIf="errorMessageIsVisible">
+         <br />
+         <span class="error-message">{{errorMessage}}</span>
+      </div>
+      <mat-form-field>
+         <input matInput [(ngModel)]="requestTokenMessage.mailAddress" placeholder="E-mail" required>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+         <input matInput (keydown.enter)="requestToken()" [(ngModel)]="requestTokenMessage.passcode"
+            placeholder="passcode" required>
+      </mat-form-field>
+      <br />
+      <button mat-stroked-button (click)="requestToken()"
+         i18n="login page| login button text @@loginPageButtonText">Login</button>
+   </div>
+</div>

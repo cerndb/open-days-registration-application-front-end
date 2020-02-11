@@ -1,0 +1,61 @@
+<!-- Copyright (C) 2019, CERN
+This software is distributed under the terms of the GNU General Public
+Licence version 3 (GPL Version 3), copied verbatim in the file "LICENSE".
+In applying this license, CERN does not waive the privileges and immunities
+granted to it by virtue of its status as Intergovernmental Organization
+or submit itself to any jurisdiction. -->
+<h1 i18n="visitors detail| number of visitors header text @@visitorsDetailNbrOfVisitorsHeader">Number of
+   visitors</h1>
+<div>&nbsp;</div>
+<div
+   [ngClass]="{'detail-description-div--line-breaked': !deviceIsMobile,'center-aligned': !deviceIsMobile,'detail-description-div--mob' : deviceIsMobile}">
+   <span i18n="visitors detail| instruction message @@visitorsDetailInstructionText1">Specify the number of
+      visitors (max of 6, including yourself and children) and their age.</span>
+   <br />
+   <span i18n="visitors detail| instruction message @@visitorsDetailInstructionText2">If it is still
+      available you can pick the LHC Fast Track option (12 years old or over) that guarantees a faster access. LHC
+      visits are possible without this option.</span>
+   <br />
+   <span i18n="visitors detail| instruction message @@visitorsDetailInstructionText3">There must be an adult
+      (18 years old or over) in all groups of visitors.</span>
+   <br />
+   <span i18n="visitors detail| instruction message @@visitorsDetailInstructionText4">Age must be between 1
+      and 120. </span>
+</div>
+<div>&nbsp;</div>
+<div>
+   <span>
+      <button mat-stroked-button (click)="addNewVisitor()">
+         <mat-icon class="icon-color" aria-label="check" inline=true>add_circle_outline</mat-icon>
+         <span i18n="visitors detail| add new visitor button text @@visitorsDetailAddVisitorButtonText">Add
+            one visitor</span>
+      </button>
+   </span>
+   <span>&nbsp;&nbsp;&nbsp;</span>
+   <span>{{visitContainer.visitorDetails.length}} / {{maxNumberOfVisistors}}</span>
+   <span *ngIf="availableTextVisible" i18n="visitors detail| available places text @@visitorsDetailAvailableSpaceText">
+      available</span>
+   <span>&nbsp;&nbsp;&nbsp;</span>
+</div>
+<div>&nbsp;</div>
+<div *ngIf="workflowUpdate">
+   <span i18n="visitors detail| available fast track text @@visitorsDetailAvailableFastTrackSpaceText">Number of
+      available LHC Fast Track: </span>
+   <span>{{numberOfAvailableFastTrackPlaces}}</span>
+</div>
+<div>
+   <ul class="unformatted-list">
+      <li *ngFor="let visitor of visitContainer.visitorDetails; index as visitorIndex;">
+         <app-visitor-details [visitorDetail]="visitor" [visitorIndex]="visitorIndex" [deviceIsMobile]="deviceIsMobile"
+            [fastTrackAllowed]="fastTrackAllowed" (visitorNeedsToBeRemoved)="removeVisitorDetail($event);"
+            (visitorDetailChanged)="updateVisitorDetail($event);"
+            (inputErrorStatusChanged)="inputErrorStatusChanges($event);"></app-visitor-details>
+      </li>
+   </ul>
+</div>
+<section>
+   <mat-checkbox [(ngModel)]="visitContainer.groupHasDisabledPerson"
+      i18n="visitors detail| checkbox group has disabled mobility @@visitorsDetailDisabledMobility"
+      (change)="groupHasdisabledPersonChanged();">Group
+      has person with reduced mobility</mat-checkbox>
+</section>

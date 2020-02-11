@@ -1,0 +1,21 @@
+<!-- Copyright (C) 2019, CERN
+This software is distributed under the terms of the GNU General Public
+Licence version 3 (GPL Version 3), copied verbatim in the file "LICENSE".
+In applying this license, CERN does not waive the privileges and immunities
+granted to it by virtue of its status as Intergovernmental Organization
+or submit itself to any jurisdiction. -->
+<div
+   [ngClass]="{'transport-type-selector__detail-description-div': !deviceIsMobile,'transport-type-selector__detail-description-div--mob': deviceIsMobile}"
+   i18n="transport types page| point of origin text @@transportTypesPointOfOriginInstructionText">To help us
+   organizing the event, please let us know where you will come from.</div>
+<div>&nbsp;</div>
+<div [ngClass]="{'radio-container-desktop': !deviceIsMobile}">
+   <section [ngClass]="{'transport-type-selection-section': deviceIsMobile}">
+      <mat-radio-group [(ngModel)]="selectedPointOfOrigin" class="transport-type-selector__radio-group">
+         <mat-radio-button *ngFor="let originPoint of pointOfOrigins" [value]="originPoint.value"
+            class="transport-type-selector__radio-group__element" (change)="pointOfOriginChange($event)">
+            {{originPoint.displayName}}
+         </mat-radio-button>
+      </mat-radio-group>
+   </section>
+</div>

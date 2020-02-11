@@ -1,0 +1,69 @@
+<!-- Copyright (C) 2019, CERN
+This software is distributed under the terms of the GNU General Public
+Licence version 3 (GPL Version 3), copied verbatim in the file "LICENSE".
+In applying this license, CERN does not waive the privileges and immunities
+granted to it by virtue of its status as Intergovernmental Organization
+or submit itself to any jurisdiction. -->
+<div class="request-passcode-page center-aligned">
+   <h1 i18n="request passcode page| header text @@requestPasscodePageHeaderText">Request a new passcode by email</h1>
+   <div *ngIf="!passcodesuccessfulRequested"
+      i18n="request passcode page| instruction text @@requestPasscodePageInstructionText">Enter your email address and
+      we will send you the passcode.</div>
+   <div *ngIf="passcodesuccessfulRequested">
+      <div i18n="request passcode page| successfully requested passcode text @@requestPasscodePageSuccessfulText">Soon
+      you will receive an email with your access to the registration page. If you haven’t received it in your inbox,
+      please check your spam folders..</div>
+      <div>&nbsp;</div>
+      <button mat-stroked-button (click)="navigateToLogin()"
+         i18n="request passcode page| navigate to login @@requestPasscodePageRequestNavigateToLoginButtonText">Login
+         with passcode</button>
+   </div>
+   <div *ngIf="!passcodesuccessfulRequested">
+      <div class="general-form-inputs">
+         <input [(ngModel)]="requestPasscodeMessage.firstname253589667" type="text" />
+         <input [(ngModel)]="requestPasscodeMessage.lastname345996689" type="text" />
+         <input [(ngModel)]="requestPasscodeMessage.phone268459683" type="text" />
+      </div>
+      <div>
+         <mat-form-field>
+            <input matInput (keydown.enter)="requestPasscode()" [(ngModel)]="requestPasscodeMessage.mailAddress"
+               placeholder="E-mail" required>
+         </mat-form-field>
+      </div>
+      <div *ngIf="reCaptchaIsEnabled">
+         <app-captcha-checker (nonRobotStatusProoved)="captchaValidationMade($event)"></app-captcha-checker>
+         <div>&nbsp;</div>
+      </div>
+      <div *ngIf="errorMessageIsVisible">
+         <span class="error-message">{{errorMessage}}</span>
+      </div>
+      <div [ngClass]="{'request-passcode-page__checkboxes--desktop': !deviceIsMobile}">
+         <mat-checkbox [(ngModel)]="requestPasscodeMessage.personalDataAgreement">
+            <span i18n="request passcode page| personal data agreement part 1@@personalDataAgreementPart1">I understand
+               that,my personal data will be processed by CERN in accordance with the terms of the
+            </span><a href="{{visitorRegistartionPrivacyNoticeLink}}"
+               i18n="request passcode page| personal data agreement part 2 link of privacy notice@@personalDataAgreementPart2"
+               target="_blank">Open
+               Days 2019 Visitors Registration Privacy Notice</a><span
+               i18n="request passcode page| personal data agreement part 3 link between text @@personalDataAgreementPart3">
+                and the </span><a href="{{siteSecurityPrivacyNotice}}"
+               i18n="request passcode page| personal data agreement part 3 link site security @@personalDataAgreementPart4"
+               target="_blank"> CERN
+               Site Security Privacy Notice.</a>
+         </mat-checkbox>
+         <mat-checkbox [(ngModel)]="requestPasscodeMessage.imageTakenAgreement"><span
+               i18n="request passcode page| image taken agreement @@imageTakenAgreement">I acknowledge that,as a
+               consequence of visiting CERN, my image may be captured in photographs and recordings made by professional
+               photographers engaged by CERN as well as visitors to Open Days. To the extent that I do not wish to be in
+               such photographs and recordings I recognise that it is my responsibility to take measures to ensure that
+               my image is not captured. I further understand and accept that CERN bears no responsibility for the
+               photographs and recordings taken by visitors on the CERN site.</span></mat-checkbox>
+      </div>
+      <div>&nbsp;</div>
+      <div>
+         <button mat-stroked-button (click)="requestPasscode()"
+            i18n="request passcode page| request passcode button text @@requestPasscodePageRequestPasscodeButtonText">Request
+            passcode</button>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,32 @@
+<!-- Copyright (C) 2019, CERN
+This software is distributed under the terms of the GNU General Public
+Licence version 3 (GPL Version 3), copied verbatim in the file "LICENSE".
+In applying this license, CERN does not waive the privileges and immunities
+granted to it by virtue of its status as Intergovernmental Organization
+or submit itself to any jurisdiction. -->
+<div class="visitor-detail center-aligned">
+   <app-visitors-selector [deviceIsMobile]="deviceIsMobile" [maxNumberOfVisistors]="maxNumberOfVisistors"
+      [visitContainer]="visitorDetailsStoreMessage" [fastTrackAllowed]="fastTrackAllowed"
+      [numberOfAvailableFastTrackPlaces]="numberOfAvailableFastTrackPlaces" [workflowType]="workflowType"
+      (visitContainerChanged)="actualizeStoreMessage($event);"
+      (inputErrorStatusChanged)="inputErrorStatusChanges($event);"></app-visitors-selector>
+   <div *ngIf="pageHasError">
+      <div>&nbsp;</div>
+      <span class="error-message">{{pageErrorMessage}}</span>
+      <div>&nbsp;</div>
+   </div>
+   <div class="navigation-buttons">
+      <div class="navigation-button">
+         <button mat-stroked-button (click)="backStep();" mat-button
+            i18n="workflow navigation button|button back @@navigationButtonBack">Back</button>
+      </div>
+      <div class="navigation-button">
+         <button mat-stroked-button (click)="cancelProcess();" mat-button
+            i18n="workflow navigation button|button cancel @@navigationButtonCancel">Cancel</button>
+      </div>
+      <div class="navigation-button">
+         <button mat-stroked-button (click)="nextStep();" mat-button
+            i18n="workflow navigation button|button next @@navigationButtonNext">Next</button>
+      </div>
+   </div>
+</div>

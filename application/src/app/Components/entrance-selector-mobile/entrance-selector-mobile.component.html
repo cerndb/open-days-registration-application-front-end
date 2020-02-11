@@ -1,0 +1,42 @@
+<!-- Copyright (C) 2019, CERN
+This software is distributed under the terms of the GNU General Public
+Licence version 3 (GPL Version 3), copied verbatim in the file "LICENSE".
+In applying this license, CERN does not waive the privileges and immunities
+granted to it by virtue of its status as Intergovernmental Organization
+or submit itself to any jurisdiction. -->
+<div *ngIf="showComponent">
+   <div>
+      <span *ngIf="previousArrivalPointArrowVisible">
+         <button mat-icon-button aria-label="Previous date" (click)="selectPreviousArrivalPoint();">
+            <mat-icon>arrow_back_ios</mat-icon>
+         </button>
+      </span>
+      <span><a href="{{arrivalPoints[selectedArrivalPointItem].siteAccessibilityInfoURL}}"
+            target="_blank">{{arrivalPoints[selectedArrivalPointItem].arrivalPointName}}</a></span>
+      <span *ngIf="nextArrivalPointArrowVisible">
+         <button mat-icon-button aria-label="Next date" (click)="selectNextArrivalPoint();">
+            <mat-icon>arrow_forward_ios</mat-icon>
+         </button>
+      </span>
+   </div>
+   <div>
+      <div>&nbsp;</div>
+      <div *ngIf="arrivalPoint.numberOfUndergroundActivities>0">
+         <span
+            i18n="arrival point selector| mobile has underground activities text@@arrivalPointMobileHasUndergroundActivitiesText">This
+            site offers one LHC visit point</span>
+      </div>
+      <div>&nbsp;</div>
+      <div>
+         <span
+            i18n="arrival point selector|number of surface activities text@@arrivalPointNbrOfSurfaceActivitiesText">Number
+            of surface activities :</span><span> <a href="{{arrivalPoint.siteActivitiesInfoURL}}"
+               target="_blank">{{arrivalPoint.numberOfSurfaceActivities}}</a></span>
+      </div>
+      <div>&nbsp;</div>
+      <div class="center-aligned">
+         <app-arrival-timeslot-mobile [arrivalPoint]="arrivalPoint" (chosenTimeslot)="updateSelectedTimeslot($event);">
+         </app-arrival-timeslot-mobile>
+      </div>
+   </div>
+</div>

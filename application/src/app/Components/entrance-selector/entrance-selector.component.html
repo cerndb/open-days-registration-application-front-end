@@ -1,0 +1,22 @@
+<!-- Copyright (C) 2019, CERN
+This software is distributed under the terms of the GNU General Public
+Licence version 3 (GPL Version 3), copied verbatim in the file "LICENSE".
+In applying this license, CERN does not waive the privileges and immunities
+granted to it by virtue of its status as Intergovernmental Organization
+or submit itself to any jurisdiction. -->
+<h2 i18n="arrival point selector page| header select timeslot text @@arrivalPointSelectorSelectTimeslotHeaderText">
+   Select site and time of arrival</h2>
+<div *ngIf="deviceIsMobile">
+   <!-- Mobile -->
+   <div>
+      <app-entrance-selector-mobile [arrivalPoints]="arrivalPoints"
+         (markedTimeslot)="updateArrivalSelectionMessage($event);"></app-entrance-selector-mobile>
+   </div>
+</div>
+<div *ngIf="!deviceIsMobile">
+   <!-- Desktop -->
+   <div>
+      <app-entrance-selector-desktop [arrivalPoints]="arrivalPoints"
+         (markedTimeslot)="updateArrivalSelectionMessage($event);"></app-entrance-selector-desktop>
+   </div>
+</div>
