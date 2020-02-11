@@ -11,6 +11,8 @@ Overview about the folder structure:
 * **application-welcome**: This is a language selector page, it was hosted at the root level of the web server. Based on the language selection choice it forwards the user to the selected language path forexample: "/en/index.html" or "/fr/index.html". For more detailed information check out the [langauge preference selector application section](#Langauge-preference-selector-application).
 * **containerize**: This folder contains the helper files to build a container which hosts the two applications. For more detailed information check out the [container approach section](#Container-approach).
 
+Note that the applications were written and tested with the dependency versions registered in the application-welcome/package.json , application/package.json. The nodejs version was 10.x. Be aware that currently there is no plan to maintain the code.
+
 # Collaborators
 
 The final application is the collaborated work of the following people:
